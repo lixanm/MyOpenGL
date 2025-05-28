@@ -3,6 +3,26 @@
 
 #include <iostream>
 
+
+//编译着色器k
+//先指定类型，再指定着色器源代码
+static unsigned int CompileShader(unsigned int type, const std::string& source)
+{
+    unsigned int id = glCreateShader(type);
+	const char* src = source.c_str(); //将std::string转换为const char*类型
+
+}
+
+//静态，不会泄露到其他翻译单元
+//提供实际着色器源代码，链接定点着色器和片段着色器，返回标识符
+static int CreateShader(const std::string& vertexShader, const std::string& fragmentShader)
+{
+	unsigned int program = glCreateProgram(); //创建一个程序对象
+
+    unsigned int vs = CompileShader(GL_VERTEX_SHADER, vertexShader); //创建顶点着色器对象,确定着色器类型为顶点着色器
+}
+
+
 int main(void)
 {
     GLFWwindow* window;
@@ -32,20 +52,22 @@ int main(void)
 		std::cout << "Error initializing GLEW" << std::endl;
 
 	//输出OpenGL版本信息
-	std::cout << "OpenGL version: " << glGetString(GL_VERSION) << std::endl;
+	//std::cout << "OpenGL version: " << glGetString(GL_VERSION) << std::endl;
 
 
     //定义一个顶点缓冲区，将数据发向显存，然后调用绘制函数
     //顶点缓冲区
     float position[] = {
-        -0.5f, -0.5f, 0.0f, // 左下角
-         0.0f,  0.5f, 0.0f, // 顶部
-         0.5f, -0.5f, 0.0f  // 右下角
+        -0.5f, -0.5f,  // 左下角
+         0.0f,  0.5f,  // 顶部
+         0.5f, -0.5f  // 右下角
 	};
 
 	unsigned int buffer; //顶点缓冲区对象的ID
+
 	glGenBuffers(1, &buffer); //生成一个顶点缓冲区对象
-	glBindBuffer(GL_ARRAY_BUFFER, buffer); //绑定顶点缓冲区对象
+
+	glBindBuffer(GL_ARRAY_BUFFER, buffer); //绑定顶点缓冲区对象（想要绑定缓冲区，只需绑定缓冲区ID即可）
 
     //缓冲区实际布局
 	glBufferData(GL_ARRAY_BUFFER, 6 * sizeof(float),position,GL_STATIC_DRAW); //分配缓冲区空间,将数据放入缓冲区中
