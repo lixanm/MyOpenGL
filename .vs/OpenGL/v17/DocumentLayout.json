@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{1DEDA3CF-5F5D-44C8-9083-3D6388696717}|OpenGL\\OpenGL.vcxproj|solutionrelative:OpenGL\\src\\Application.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{1DEDA3CF-5F5D-44C8-9083-3D6388696717}|OpenGL\\OpenGL.vcxproj|C:\\THOTH\\DaiMaXuNiJi\\c_cpp_exercise\\OpenGL\\OpenGL\\src\\FileName.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{1DEDA3CF-5F5D-44C8-9083-3D6388696717}|OpenGL\\OpenGL.vcxproj|solutionrelative:OpenGL\\src\\FileName.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1DEDA3CF-5F5D-44C8-9083-3D6388696717}|OpenGL\\OpenGL.vcxproj|C:\\THOTH\\DaiMaXuNiJi\\c_cpp_exercise\\OpenGL\\DEPENDENCIES\\GLEW\\INCLUDE\\GL\\GLEW.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{1DEDA3CF-5F5D-44C8-9083-3D6388696717}|OpenGL\\OpenGL.vcxproj|solutionrelative:DEPENDENCIES\\GLEW\\INCLUDE\\GL\\GLEW.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
@@ -18,11 +22,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "FileName.cpp",
+              "DocumentMoniker": "C:\\THOTH\\DaiMaXuNiJi\\c_cpp_exercise\\OpenGL\\OpenGL\\src\\FileName.cpp",
+              "RelativeDocumentMoniker": "OpenGL\\src\\FileName.cpp",
+              "ToolTip": "C:\\THOTH\\DaiMaXuNiJi\\c_cpp_exercise\\OpenGL\\OpenGL\\src\\FileName.cpp",
+              "RelativeToolTip": "OpenGL\\src\\FileName.cpp",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAACsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-05-28T06:25:51.305Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "glew.h",
               "DocumentMoniker": "C:\\THOTH\\DaiMaXuNiJi\\c_cpp_exercise\\OpenGL\\Dependencies\\GLEW\\include\\GL\\glew.h",
               "RelativeDocumentMoniker": "Dependencies\\GLEW\\include\\GL\\glew.h",
@@ -30,7 +47,8 @@
               "RelativeToolTip": "Dependencies\\GLEW\\include\\GL\\glew.h",
               "ViewState": "AgIAAEhcAAAAAAAAAAAQwF5cAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-26T11:38:22.674Z"
+              "WhenOpened": "2025-04-26T11:38:22.674Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -40,7 +58,7 @@
               "RelativeDocumentMoniker": "OpenGL\\src\\Application.cpp",
               "ToolTip": "C:\\THOTH\\DaiMaXuNiJi\\c_cpp_exercise\\OpenGL\\OpenGL\\src\\Application.cpp",
               "RelativeToolTip": "OpenGL\\src\\Application.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAAC4AAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-04-25T16:35:17.671Z",
               "EditorCaption": ""

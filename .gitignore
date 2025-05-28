@@ -1,0 +1,190 @@
+## 忽略 Visual Studio 临时文件、生成结果和文件
+## 更多信息请参考: https://github.com/github/gitignore/blob/main/VisualStudio.gitignore
+
+# 用户特定文件
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# 生成结果
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# Visual Studio 2015/2017 缓存/选项目录
+.vs/
+# Uncomment if you have tasks that create the project's static files in wwwroot
+#wwwroot/
+
+# Visual Studio 2017 自动生成的文件
+Generated\ Files/
+
+# MSTest 测试结果
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+
+# NUnit
+*.VisualState.xml
+TestResult.xml
+nunit-*.xml
+
+# Build Results of an ATL Project
+[Dd]ebugPS/
+[Rr]eleasePS/
+dlldata.c
+
+# Benchmark Results
+BenchmarkDotNet.Artifacts/
+
+# .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# StyleCop
+StyleCopReport.xml
+
+# Files built by Visual Studio
+*_i.c
+*_p.c
+*_h.h
+*.ilk
+*.meta
+*.obj
+*.iobj
+*.pch
+*.pdb
+*.ipdb
+*.pgc
+*.pgd
+*.rsp
+*.sbr
+*.tlb
+*.tli
+*.tlh
+*.tmp
+*.tmp_proj
+*_wpftmp.csproj
+*.log
+*.vspscc
+*.vssscc
+.builds
+*.pidb
+*.svclog
+*.scc
+
+# Chutzpah Test files
+_Chutzpah*
+
+# Visual C++ 项目文件
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+
+# Visual Studio 项目生成器
+*.vcxproj.*.filters
+
+# 自动生成的 CMake 文件
+CMakeLists.txt.user
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+Testing/
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+_deps/
+
+# ReSharper 文件
+_ReSharper*/
+*.rsuser
+
+# 预编译头文件
+*.pch
+
+# 程序包
+packages/
+
+# 编译生成的符号文件
+*.exp
+*.lib
+*.dll
+
+# 文档文件
+*.doc
+*.docx
+*.xls
+*.xlsx
+*.ppt
+*.pptx
+
+# 资源编译器生成的文件
+*.res
+
+# 其他
+*.aps
+*.ncb
+*.opensdf
+*.sdf
+*.cachefile
+*.db
+*.idb
+*.mod
+*.msi
+*.sln
+*.vcpkg
+*.vcpkg.sln
+*.vcxproj.*.user
+
+# 本地化文件
+*.local
+
+# 临时文件
+*.tmp
+
+# 二进制文件
+*.exe
+*.dll
+*.so
+*.dylib
+
+# 打包目录
+[Bb]undle/
+
+# 代码分析文件
+*.ruleset
+
+# 单元测试覆盖率文件
+*.coverage
+*.coveragexml
+
+# NuGet 包目录
+[Nn]u[Pp]ackages/
+
+# 忽略 CMake 用户特定文件
+CMakeUserPresets.json
+
+# 忽略本地 CMake 设置文件
+CMakeLocalConfig.*
+
+# 忽略 vcpkg 构建目录
+vcpkg_installed/
+
+# 忽略 Conan 构建目录
+conanbuildinfo.*
+conaninfo.txt
+conan_imports_*/
