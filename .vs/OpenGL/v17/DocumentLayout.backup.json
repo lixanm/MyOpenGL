@@ -7,12 +7,12 @@
       "RelativeMoniker": "D:0:0:{1DEDA3CF-5F5D-44C8-9083-3D6388696717}|OpenGL\\OpenGL.vcxproj|solutionrelative:OpenGL\\src\\Application.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1DEDA3CF-5F5D-44C8-9083-3D6388696717}|OpenGL\\OpenGL.vcxproj|C:\\THOTH\\DaiMaXuNiJi\\c_cpp_exercise\\OpenGL\\DEPENDENCIES\\GLEW\\INCLUDE\\GL\\GLEW.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{1DEDA3CF-5F5D-44C8-9083-3D6388696717}|OpenGL\\OpenGL.vcxproj|solutionrelative:DEPENDENCIES\\GLEW\\INCLUDE\\GL\\GLEW.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{1DEDA3CF-5F5D-44C8-9083-3D6388696717}|OpenGL\\OpenGL.vcxproj|C:\\THOTH\\DaiMaXuNiJi\\c_cpp_exercise\\OpenGL\\OpenGL\\res\\shaders\\Basic.shader||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{1DEDA3CF-5F5D-44C8-9083-3D6388696717}|OpenGL\\OpenGL.vcxproj|solutionrelative:OpenGL\\res\\shaders\\Basic.shader||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1DEDA3CF-5F5D-44C8-9083-3D6388696717}|OpenGL\\OpenGL.vcxproj|C:\\THOTH\\DaiMaXuNiJi\\c_cpp_exercise\\OpenGL\\OpenGL\\src\\FileName.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{1DEDA3CF-5F5D-44C8-9083-3D6388696717}|OpenGL\\OpenGL.vcxproj|solutionrelative:OpenGL\\src\\FileName.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{1DEDA3CF-5F5D-44C8-9083-3D6388696717}|OpenGL\\OpenGL.vcxproj|C:\\THOTH\\DaiMaXuNiJi\\c_cpp_exercise\\OpenGL\\DEPENDENCIES\\GLEW\\INCLUDE\\GL\\GLEW.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{1DEDA3CF-5F5D-44C8-9083-3D6388696717}|OpenGL\\OpenGL.vcxproj|solutionrelative:DEPENDENCIES\\GLEW\\INCLUDE\\GL\\GLEW.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,6 +27,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Basic.shader",
+              "DocumentMoniker": "C:\\THOTH\\DaiMaXuNiJi\\c_cpp_exercise\\OpenGL\\OpenGL\\res\\shaders\\Basic.shader",
+              "RelativeDocumentMoniker": "OpenGL\\res\\shaders\\Basic.shader",
+              "ToolTip": "C:\\THOTH\\DaiMaXuNiJi\\c_cpp_exercise\\OpenGL\\OpenGL\\res\\shaders\\Basic.shader",
+              "RelativeToolTip": "OpenGL\\res\\shaders\\Basic.shader",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002777|",
+              "WhenOpened": "2025-08-14T15:30:55.954Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "glew.h",
               "DocumentMoniker": "C:\\THOTH\\DaiMaXuNiJi\\c_cpp_exercise\\OpenGL\\Dependencies\\GLEW\\include\\GL\\glew.h",
               "RelativeDocumentMoniker": "Dependencies\\GLEW\\include\\GL\\glew.h",
@@ -39,26 +52,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FileName.cpp",
-              "DocumentMoniker": "C:\\THOTH\\DaiMaXuNiJi\\c_cpp_exercise\\OpenGL\\OpenGL\\src\\FileName.cpp",
-              "RelativeDocumentMoniker": "OpenGL\\src\\FileName.cpp",
-              "ToolTip": "C:\\THOTH\\DaiMaXuNiJi\\c_cpp_exercise\\OpenGL\\OpenGL\\src\\FileName.cpp",
-              "RelativeToolTip": "OpenGL\\src\\FileName.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-05-28T06:25:51.305Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Application.cpp",
               "DocumentMoniker": "C:\\THOTH\\DaiMaXuNiJi\\c_cpp_exercise\\OpenGL\\OpenGL\\src\\Application.cpp",
               "RelativeDocumentMoniker": "OpenGL\\src\\Application.cpp",
               "ToolTip": "C:\\THOTH\\DaiMaXuNiJi\\c_cpp_exercise\\OpenGL\\OpenGL\\src\\Application.cpp",
               "RelativeToolTip": "OpenGL\\src\\Application.cpp",
-              "ViewState": "AgIAAHgAAAAAAAAAAAAAAHwAAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAtwBMAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-04-25T16:35:17.671Z",
               "EditorCaption": ""

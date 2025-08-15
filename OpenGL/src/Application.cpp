@@ -3,6 +3,43 @@
 
 #include <iostream>
 
+#include<fstream>
+#include <string>
+#include <sstream>
+
+struct ShaderProgramSource
+{
+    std::string VertexSource;
+	std::string FragmentSource;
+};
+
+static ShaderProgramSource ParseShader(const std::string& filepath)
+{
+    std::ifstream stream(filepath); //打开文件流
+    std::string line;
+    std::stringstream ss[2]; //创建两个字符串流，分别存储顶点着色器和片段着色器
+    enum class ShaderType
+    {
+        NONE = -1, VERTEX = 0, FRAGMENT = 1
+    };
+    ShaderType type = ShaderType::NONE; //初始类型为NONE
+    while (getline(stream, line)) //逐行读取文件内容
+    {
+        if (line.find("#shader") != std::string::npos) //查找"#shader"关键字
+        {
+            if (line.find("vertex") != std::string::npos) //如果是顶点着色器
+                type = ShaderType::VERTEX;
+            else if (line.find("fragment") != std::string::npos) //如果是片段着色器
+                type = ShaderType::FRAGMENT;
+        }
+        else //如果不是"#shader"关键字
+        {
+            ss[(int)type] << line << "\n"; //将当前行添加到对应的字符串流中
+        }
+    }
+
+	return { ss[0].str(), ss[1].str() }; //返回顶点着色器和片段着色器的源代码
+}
 
 //编译着色器k
 //先指定类型，再指定着色器源代码
@@ -56,7 +93,7 @@ static unsigned int CreateShader(const std::string& vertexShader, const std::str
 
 int main(void)
 {
-    GLFWwindow* window;
+	GLFWwindow* window;//窗口指针
 
     //初始化GLFW库
     /* Initialize the library */
@@ -64,8 +101,7 @@ int main(void)
         return -1;
 
     
-    //创建一个窗口
-    /* Create a windowed mode window and its OpenGL context */
+	//创建一个窗口及其OpenGL上下文
     window = glfwCreateWindow(640, 480, "Hello World", NULL, NULL);
     if (!window)
     {
@@ -97,6 +133,7 @@ int main(void)
 
 	unsigned int buffer; //顶点缓冲区对象的ID
 
+    //生成缓冲区对象名称
 	glGenBuffers(1, &buffer); //生成一个顶点缓冲区并返回一个ID，参数1表示生成一个缓冲区，&buffer是存储生成的缓冲区ID的变量地址
 
 	glBindBuffer(GL_ARRAY_BUFFER, buffer); //绑定顶点缓冲区对象（想要绑定缓冲区，只需绑定缓冲区ID即可）
@@ -113,26 +150,10 @@ int main(void)
     // GL_FLOAT表示数据类型，GL_FALSE表示不需要归一化，2 * sizeof(float)表示每个顶点的步长，(void*)0表示从缓冲区的起始位置开始读取数据
     glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 2 * sizeof(float), (const void* const)0);
 
-	std::string vertexShader = R"(
-        #version 330 core
-
-        layout(location = 0) in vec4 position; //顶点位置
-        void main()
-        {
-            gl_Position = position; //将顶点位置转换为裁剪空间坐标
-        }
-    )"; 
-    std::string fragmentShader = R"(
-        #version 330 core
-
-        layout(location = 0) out vec4 color; 
-        void main()
-        {
-            color = vec4(1.0, 0.0, 0.0, 1.0); //设置片段颜色为红色
-        }
-    )";
-
-	unsigned int shader = CreateShader(vertexShader, fragmentShader); //创建着色器程序
+	
+	ShaderProgramSource source = ParseShader("res/shaders/Basic.shader"/*, source.VertexSource, source.FragmentSource*/); //解析着色器文件，获取顶点着色器和片段着色器的源代码
+	
+	unsigned int shader = CreateShader(source.VertexSource, source.FragmentSource); //创建着色器程序
 	glUseProgram(shader); //使用着色器程序
 
 
@@ -159,7 +180,7 @@ int main(void)
         glfwPollEvents();
     }
 
-	glDeleteProgram(shader); //删除着色器程序
+    //glDeleteProgram(shader); //删除着色器程序
 
     //清除GLFW资源
     glfwTerminate();
