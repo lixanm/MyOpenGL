@@ -113,13 +113,11 @@ static unsigned int CreateShader(const std::string& vertexShader, const std::str
 int main(void)
 {
 	GLFWwindow* window;//窗口指针
-
 	//初始化GLFW库
 	/* Initialize the library */
 	if (!glfwInit())
 		return -1;
 
-	
 	//创建一个窗口及其OpenGL上下文
 	window = glfwCreateWindow(640, 480, "Hello World", NULL, NULL);/*监测（窗口模式），共享（不共享资源）*/
 
@@ -131,6 +129,11 @@ int main(void)
 	}
 
 	glfwMakeContextCurrent(window);//此函数使指定窗口的 OpenGL 或 OpenGL ES 上下文在调用线程上为当前上下文
+
+
+
+	glfwSwapInterval(1);//交换间隔为1；
+
 
 	//创建上下文后初始化GLEW
 	if(glewInit()!=GLEW_OK)
@@ -178,7 +181,7 @@ int main(void)
 	unsigned int ibo;
 	glGenBuffers(1, &ibo);
 	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ibo);
-	glBufferData(GL_ELEMENT_ARRAY_BUFFER, 6 * sizeof(unsigned int), indices, GL_STATIC_DRAW);
+	glBufferData(GL_ELEMENT_ARRAY_BUFFER, 2 * 3 * sizeof(unsigned int), indices, GL_STATIC_DRAW);
 	
 
 
@@ -186,7 +189,13 @@ int main(void)
 	unsigned int shader = CreateShader(source.VertexSource, source.FragmentSource); //创建着色器程序
 	glUseProgram(shader); //使用着色器程序，这些可执行文件成为当前状态的一部分
 
+	unsigned int location = glGetUniformLocation(shader, "u_Color"); //获取片段着色器中颜色变量的地址
+	ASSERT(location != -1); 
+	glUniform4f(location, 0.5f, 0.2f, 0.8f, 1.0f); //设置片段着色器中的颜色变量
 
+
+	float r = 0.0f;
+	float increment = 0.5f;
 	//主渲染循环
 	while (!glfwWindowShouldClose(window))
 	{
@@ -194,13 +203,20 @@ int main(void)
 		glClear(GL_COLOR_BUFFER_BIT);
 
 
+		glUniform4f(location, r, 0.2f, 0.8f, 1.0f); //设置片段着色器中的颜色变量
+
+
 		//为缓冲区发出绘制调用，两个办法：glDrawArrays()(没有索引缓冲器) 或 glDrawElements()
 		//glDrawArrays(GL_TRIANGLES, 0, 6); //绘制三角形，参数分别为绘制模式、起始索引、顶点数量
 		//使用索引缓冲区绘制
-		GLCall(glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, (void*)0)); //绘制三角形，参数分别为绘制模式、索引数量、索引类型、索引偏移量
+		GLCall(glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, nullptr)); //绘制三角形，参数分别为绘制模式、索引数量、索引类型、索引偏移量
 
 
 
+		if (r > 1.0f)increment = -0.05f;
+		else if (r < 0.0f)increment = 0.05f;
+
+		r += increment;
 
 
 		glfwSwapBuffers(window); //避免画面撕裂
